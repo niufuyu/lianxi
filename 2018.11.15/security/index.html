@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<table border='1'>
+<tr><th>
+{foreach:items=$data key=$key item=$value }
+	<tr>
+		<td>{echo:$key+1}</td>
+		<td>{$value['username']}</td>
+		<td>{echo:date('Y-m-d',$value['addtime'])}</td>
+		<td><a href="{url:security/delete/id/$value['id']}">删除</a></td>
+	</tr>
+{/foreach}
+</table>
+</body>
+</html>
